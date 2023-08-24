@@ -7,7 +7,7 @@ const AddBlog = () => {
     const blogData = async () => {
         console.warn(name, blog, UserId)
 
-        let result = await fetch('http://localhost:3000/add', {
+        let result = await fetch('https://e-blog-lzgl.onrender.com/add', {
             method: "post",
             body: JSON.stringify({ name, blog, UserId }),
             headers: {

@@ -6,7 +6,7 @@ const BlogList = () => {
         getBlogs();
     }, [])
     const getBlogs = async () => {
-        let result = await fetch('http://localhost:3000/blogs');
+        let result = await fetch('https://e-blog-lzgl.onrender.com/blogs');
         result = await result.json();
         setBlogs(result);
         //console.warn(result)
@@ -17,7 +17,7 @@ const BlogList = () => {
         const key = event.target.value;
 
         if (key) {
-            let result = await fetch(`http://localhost:3000/search/${key}`);
+            let result = await fetch(`https://e-blog-lzgl.onrender.com/search/${key}`);
             result = await result.json();
             if (result) {
                 setBlogs(result);
@@ -32,7 +32,7 @@ const BlogList = () => {
     const DeleteData = async (id) => {
 
 
-        let result = await fetch(`http://localhost:3000/blogs/${id}`, {
+        let result = await fetch(`https://e-blog-lzgl.onrender.com/blogs/${id}`, {
             method: "Delete"
 
         })

@@ -11,7 +11,7 @@ const Profile = () => {
     useEffect(() => {
 
         const getProfileData = async () => {
-            let result = await fetch(`http://localhost:3000/profile/${UserId}`, {
+            let result = await fetch(`https://e-blog-lzgl.onrender.com/profile/${UserId}`, {
                 // method:"get",
                 // headers:{
                 //     "Content-Type":"application/json"

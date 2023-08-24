@@ -17,7 +17,7 @@ const Signup = () => {
 
     const collectData = async () => {
         console.warn(name, email, password, mobile);
-        let result = await fetch('http://localhost:3000/register', {
+        let result = await fetch('https://e-blog-lzgl.onrender.com/register', {
             method: "post",
             body: JSON.stringify({ name, email, password, mobile }),
             headers: {
